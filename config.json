@@ -3,7 +3,7 @@
         "port": 5678
     },
     "app": {
-        "apiPrefix": "/vcc-botkit",
+        "apiPrefix": "/vcc-dev-botkit",
         "url": "https://demo.kore.net"
     },
     "validations": {

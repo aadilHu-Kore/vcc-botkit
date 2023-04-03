@@ -18,7 +18,7 @@ module.exports = {
 
         //------------------SAT VOICE START------------------------------------------------------------------ 
         if (data.context.session.BotUserSession.channels[0].type == 'smartassist' &&
-            (data.context.session.UserSession.DialedNumber == '+13207382433' ||
+            (data.context.session.UserSession.DialedNumber == '+13207382433' || data.context.session.UserSession.DialedNumber == '+12513517333' ||
                 data.context.session.UserSession.DialedNumber == '1234')) {
             data.metaInfo = { setBotLanguage: 'en' };
             data.context.session.BotUserSession.selectedLanguage = 'en';
@@ -26,7 +26,7 @@ module.exports = {
         }
 
         else if (data.context.session.BotUserSession.channels[0].type == 'smartassist' &&
-            (data.context.session.UserSession.DialedNumber == '+14255376421' ||
+            (data.context.session.UserSession.DialedNumber == '+14255376421' || data.context.session.UserSession.DialedNumber == '+12513060520' || data.context.session.UserSession.DialedNumber == '+15855172001' ||
                 data.context.session.UserSession.DialedNumber == '4321')) {
             data.metaInfo = { setBotLanguage: 'es' };
             data.context.session.BotUserSession.selectedLanguage = 'es';

@@ -15,10 +15,10 @@
             "appId": "cs-5fe1bf27-fa1e-5ba9-bc81-2b2e61c9f35d",
             "botName": "VCC_Dev"
         },
-        "st-980bad94": {
-            "apikey": "",
-            "appId": "",
-            "botName": "HCP_VCC_Test"
+        "st-909f184e-0244-5014-a00d-bee926a19f42": {
+            "apikey": "4hm6mKmfij4zH0H5K5+m7nDO56L/vDyv7e+Nj7frnSE=",
+            "appId": "cs-05f1d185-e26a-599b-83a8-2736d511d087",
+            "botName": "VCC_QA"
         }
     },
     "redis": {

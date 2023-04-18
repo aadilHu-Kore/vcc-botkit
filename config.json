@@ -3,22 +3,17 @@
         "port": 5678
     },
     "app": {
-        "apiPrefix": "/vcc-dev-botkit",
-        "url": "https://demo.kore.net"
+        "apiPrefix": "/syh-prod-botkit",
+        "url": "http://healthassist-vcc-prod.kore-prod-aws.com"
     },
     "validations": {
         "leastNodeVersion": 10
     },
     "credentials": {
-        "st-a230d0c5-269a-5dd5-9b95-8f6aeba694d9": {
-            "apikey": "gqVbjWNGv+zotvDsxqAQaRaSMa28RexVjqF2RBMfPJQ=",
-            "appId": "cs-5fe1bf27-fa1e-5ba9-bc81-2b2e61c9f35d",
-            "botName": "VCC_Dev"
-        },
-        "st-909f184e-0244-5014-a00d-bee926a19f42": {
-            "apikey": "4hm6mKmfij4zH0H5K5+m7nDO56L/vDyv7e+Nj7frnSE=",
-            "appId": "cs-05f1d185-e26a-599b-83a8-2736d511d087",
-            "botName": "VCC_QA"
+        "st-ed88a790-0d2d-5513-ab65-b49c0b4ccf53": {
+            "apikey": "Db/iFO0dPQFivb4ttF59Vpsd7NkhUej7fGdAg5PV0eg=",
+            "appId": "cs-af59b6f0-a66d-51f8-bc8f-2d77e10115fc",
+            "botName": "HA_Provider_VCC"
         }
     },
     "redis": {

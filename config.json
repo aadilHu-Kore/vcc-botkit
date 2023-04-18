@@ -3,7 +3,7 @@
         "port": 5678
     },
     "app": {
-        "apiPrefix": "/syh-prod-botkit",
+        "apiPrefix": "/vcc-prod-botkit",
         "url": "http://healthassist-vcc-prod.kore-prod-aws.com"
     },
     "validations": {

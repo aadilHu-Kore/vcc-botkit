@@ -10,7 +10,7 @@ module.exports = {
 
     on_user_message: function (requestId, data, callback) {
         console.log("------------------------------------------");
-        console.log(data.context.session.UserSession.DialedNumber);
+        console.log(data.context.session.UserSession.dialedNumber);
         console.log(data.context.session.UserSession);
         console.log("------------------------------------------");
 
@@ -22,27 +22,27 @@ module.exports = {
 
         //------------------SAT VOICE START------------------------------------------------------------------ 
         if (data.context.session.BotUserSession.channels[0].type == 'smartassist' &&
-            (data.context.session.UserSession.DialedNumber == '5670' || data.context.session.UserSession.DialedNumber == '5672')) {
+            (data.context.session.UserSession.dialedNumber == '5670' || data.context.session.UserSession.dialedNumber == '5672')) {
             data.metaInfo = { setBotLanguage: 'en' };
             data.context.session.BotUserSession.selectedLanguage = 'en';
             data.context.session.BotUserSession.setLanguageOverrideFlag = false;
             data.context.session.BotUserSession.isSpeciality = false
 
         } else if (data.context.session.BotUserSession.channels[0].type == 'smartassist' &&
-            (data.context.session.UserSession.DialedNumber == '5671' || data.context.session.UserSession.DialedNumber === '5673')) {
+            (data.context.session.UserSession.dialedNumber == '5671' || data.context.session.UserSession.dialedNumber === '5673')) {
             data.metaInfo = { setBotLanguage: 'es' };
             data.context.session.BotUserSession.selectedLanguage = 'es';
             data.context.session.BotUserSession.setLanguageOverrideFlag = false;
             data.context.session.BotUserSession.isSpeciality = false
 
         } else if ((data.context.session.BotUserSession.channels[0].type === 'smartassist' &&
-            (data.context.session.UserSession.DialedNumber == '5674'))) {
+            (data.context.session.UserSession.dialedNumber == '5674'))) {
             data.metaInfo = { setBotLanguage: 'en' };
             data.context.session.BotUserSession.isSpeciality = true
             data.context.session.BotUserSession.selectedLanguage = 'en';
             data.context.session.BotUserSession.setLanguageOverrideFlag = false;
         } else if ((data.context.session.BotUserSession.channels[0].type === 'smartassist') &&
-            (data.context.session.UserSession.DialedNumber == '5675')) {
+            (data.context.session.UserSession.dialedNumber == '5675')) {
             data.metaInfo = { setBotLanguage: 'es' };
             data.context.session.BotUserSession.isSpeciality = true
             data.context.session.BotUserSession.selectedLanguage = 'es';
@@ -98,7 +98,7 @@ module.exports = {
         console.log(new Date(), "ON_BOT_MESSAGE : ", data.message);
         console.log("Language override Flag value on BOT EVENT::", data.context.session.BotUserSession.setLanguageOverrideFlag)
         console.log("caller number on BOT EVENT:", data.context.session.UserSession.Caller)
-        console.log("dialed number on BOT EVENT:", data.context.session.UserSession.DialedNumber)
+        console.log("dialed number on BOT EVENT:", data.context.session.UserSession.dialedNumber)
 
         return sdk.sendUserMessage(data, callback);
     },

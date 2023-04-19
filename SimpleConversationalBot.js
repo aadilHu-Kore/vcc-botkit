@@ -9,6 +9,10 @@ module.exports = {
     botName: botName,
 
     on_user_message: function (requestId, data, callback) {
+        console.log("------------------------------------------");
+        console.log(data.context.session.UserSession.DialedNumber);
+        console.log(data.context.session.UserSession);
+        console.log("------------------------------------------");
 
 
         if (data.context.session.BotUserSession.setLanguageOverrideFlag === true || data.channel.botEvent === 'ON_CONNECT_EVENT') {

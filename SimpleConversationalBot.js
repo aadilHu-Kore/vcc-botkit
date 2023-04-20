@@ -36,18 +36,19 @@ module.exports = {
             data.context.session.BotUserSession.isSpeciality = false
 
         } else if ((data.context.session.BotUserSession.channels[0].type === 'smartassist' &&
-            (data.context.session.UserSession.dialedNumber == '5674'))) {
+            (data.context.session.UserSession.dialedNumber == '5674' || data.context.session.UserSession.dialedNumber == '5675'))) {
             data.metaInfo = { setBotLanguage: 'en' };
             data.context.session.BotUserSession.isSpeciality = true
             data.context.session.BotUserSession.selectedLanguage = 'en';
             data.context.session.BotUserSession.setLanguageOverrideFlag = false;
-        } else if ((data.context.session.BotUserSession.channels[0].type === 'smartassist') &&
-            (data.context.session.UserSession.dialedNumber == '5675')) {
-            data.metaInfo = { setBotLanguage: 'es' };
-            data.context.session.BotUserSession.isSpeciality = true
-            data.context.session.BotUserSession.selectedLanguage = 'es';
-            data.context.session.BotUserSession.setLanguageOverrideFlag = false;
-        }
+        } 
+        // else if ((data.context.session.BotUserSession.channels[0].type === 'smartassist') &&
+        //     (data.context.session.UserSession.dialedNumber == '5675')) {
+        //     data.metaInfo = { setBotLanguage: 'es' };
+        //     data.context.session.BotUserSession.isSpeciality = true
+        //     data.context.session.BotUserSession.selectedLanguage = 'es';
+        //     data.context.session.BotUserSession.setLanguageOverrideFlag = false;
+        // }
         //------------------SAT VOICE END------------------------------------------------------------------
 
         //------------------WEB START------------------------------------------------------------------ 

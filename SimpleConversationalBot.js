@@ -37,9 +37,9 @@ module.exports = {
             (data.context.session.UserSession.DialedNumber == '+15855774404' ||
                 data.context.session.UserSession.DialedNumber == '5674' ||
                 data.context.session.UserSession.DialedNumber == '5675'))) {
-            data.metaInfo = { setBotLanguage: 'en' };
+            data.metaInfo = { setBotLanguage: 'es' };
             data.context.session.BotUserSession.isSpeciality = true
-            data.context.session.BotUserSession.selectedLanguage = 'en';
+            data.context.session.BotUserSession.selectedLanguage = 'es';
             data.context.session.BotUserSession.setLanguageOverrideFlag = false;
         }
         //------------------SAT VOICE END------------------------------------------------------------------

@@ -4,7 +4,7 @@
     },
     "app": {
         "apiPrefix": "/vcc-prod-botkit",
-        "url": "https://53ki59quqk.execute-api.us-east-1.amazonaws.com/default"
+        "url": "https://k44obawc40.execute-api.us-east-1.amazonaws.com/prod"
     },
     "validations": {
         "leastNodeVersion": 10

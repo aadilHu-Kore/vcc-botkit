@@ -19,6 +19,11 @@
             "apikey": "4hm6mKmfij4zH0H5K5+m7nDO56L/vDyv7e+Nj7frnSE=",
             "appId": "cs-05f1d185-e26a-599b-83a8-2736d511d087",
             "botName": "VCC_QA"
+        },
+        "st-71b12dee-ac3a-5435-be5f-11baf70c9ddf": {
+            "apikey": "rjxfA3AAPPFjDkLAxuD6QkKO/cIsNlBM5Xw2WbYl4jw=",
+            "appId": "cs-e5af7e56-2b81-51af-835d-8564394b94a1",
+            "botName": "Fewshot_VCC"
         }
     },
     "redis": {

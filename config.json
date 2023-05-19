@@ -4,7 +4,7 @@
     },
     "app": {
         "apiPrefix": "/vcc-prod-botkit",
-        "url": "http://healthassist-vcc-prod.kore-prod-aws.com"
+        "url": "https://53ki59quqk.execute-api.us-east-1.amazonaws.com/default"
     },
     "validations": {
         "leastNodeVersion": 10

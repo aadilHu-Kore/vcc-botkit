@@ -18,3 +18,5 @@ sdk.registerBot(require('./SimpleConversationalBot.js'));
 // sdk.registerBot(require('./OrderAPizza.js'));
 // sdk.registerBot(require('./BotVariables.js'));
 // sdk.registerBot(require('./LiveChat.js'));
+var routes = app.load();
+module.exports = routes;

@@ -9,16 +9,24 @@ module.exports = {
     botName: botName,
 
     on_user_message: function (requestId, data, callback) {
-        console.log("------------------------------------------");
-        console.log(data.context.session.UserSession.dialedNumber);
-        console.log(data.context.session.UserSession);
-        console.log("------------------------------------------");
+        let bus = data.context.session.BotUserSession;
+        var userSession = data.context.session.UserSession;
+        // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4");
+        // console.log(JSON.stringify(data));
+        // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4");
+        // console.log("------------------------------------------");
+        // console.log(data.context.session.UserSession.dialedNumber);
+        // console.log(data.context.session.UserSession);
+        // console.log(data.channel.botEvent);
+        // console.log(data.context.session.BotUserSession.setLanguageOverrideFlag);
+        // console.log("**************",bus.channels[0].type, bus.channels[0].preferredChannelForResponse , bus.setLanguageOverrideFlag);
+        // console.log("------------------------------------------");
 
 
         if (data.context.session.BotUserSession.setLanguageOverrideFlag === true || data.channel.botEvent === 'ON_CONNECT_EVENT') {
+            console.log("19");
             data.metaInfo = { setBotLanguage: 'en' };
         }
-
 
         //------------------SAT VOICE START------------------------------------------------------------------ 
         if (data.context.session.BotUserSession.channels[0].type == 'smartassist' &&
@@ -51,13 +59,14 @@ module.exports = {
         //------------------SAT VOICE END------------------------------------------------------------------
 
         //------------------WEB START------------------------------------------------------------------ 
-        else if (data.context.session.BotUserSession.channels[0].type == 'rtm' && data.context.session.BotUserSession.setLanguageOverrideFlag === true) {
+        if ((bus.channels[0].type == 'rtm' || bus.channels[0].preferredChannelForResponse == 'rtm') && bus.setLanguageOverrideFlag === true) {
 
+            console.log("57");
 
             if (data.message !== undefined) {
-
+                console.log("60");
                 if (data.message.toLowerCase().includes("english") || data.message.toLowerCase().includes("spanish")) {
-
+                    console.log("62");
 
                     var lang = {
                         "english": "en",
@@ -74,6 +83,8 @@ module.exports = {
                     };
                     data.context.session.BotUserSession.selectedLanguage = lang[data.message.toLowerCase()]
 
+                }else{
+                    console.log("============================ 80 I AM HTTMAN =======================",);
                 }
             }
         }

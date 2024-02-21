@@ -12,8 +12,12 @@ module.exports = {
         let bus = data.context.session.BotUserSession;
         var userSession = data.context.session.UserSession;
         // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4");
-        // console.log(JSON.stringify(data));
+        // console.log(data.message);
         // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4");
+
+        // if(data.context?.session?.UserContext?.customData?.lang == 'es'){
+        //     data.metaInfo = { setBotLanguage: 'es' };
+        // }
         // console.log("------------------------------------------");
         // console.log(data.context.session.UserSession.dialedNumber);
         // console.log(data.context.session.UserSession);
@@ -23,10 +27,10 @@ module.exports = {
         // console.log("------------------------------------------");
 
 
-        if (data.context.session.BotUserSession.setLanguageOverrideFlag === true || data.channel.botEvent === 'ON_CONNECT_EVENT') {
-            console.log("19");
-            data.metaInfo = { setBotLanguage: 'en' };
-        }
+        // if (data.context.session.BotUserSession.setLanguageOverrideFlag === true || data.channel.botEvent === 'ON_CONNECT_EVENT') {
+        //     console.log("19");
+        //     data.metaInfo = { setBotLanguage: 'en' };
+        // }
 
         //------------------SAT VOICE START------------------------------------------------------------------ 
         if (data.context.session.BotUserSession.channels[0].type == 'smartassist' &&
@@ -74,6 +78,7 @@ module.exports = {
                         "english.": "en",
                         "spanish.": "es",
                     }
+                    console.log("SETTING LANG IN WEB ------------- ", lang[data.message.toLowerCase()]);
                     data.metaInfo = {
                         setBotLanguage: lang[data.message.toLowerCase()],
                         'nlMeta': {
